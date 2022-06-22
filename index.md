@@ -1,5 +1,7 @@
 ## SOAR Guide
 
+SOAR refers to technologies that enable organizations to collect inputs monitored by the security operations team. For example, alerts from the SIEM system and other security technologies — where incident analysis and triage can be performed by leveraging a combination of human and machine power — help define, prioritize and drive standardized incident response activities. SOAR tools allow an organization to define incident analysis and response procedures in a digital workflow format.
+
 I prepared this page for sharing my experience and best practices for SOC - SOAR Projects. If you have any questions or suggestions please do not hesitate to reach out to me.
 
 ### Markdown
