@@ -1,6 +1,11 @@
 ## SOAR Project Management Guide for Beginners
 
-SOAR refers to technologies that enable organizations to collect inputs monitored by the security operations team. For example, alerts from the SIEM system and other security technologies — where incident analysis and triage can be performed by leveraging a combination of human and machine power — help define, prioritize and drive standardized incident response activities. SOAR tools allow an organization to define incident analysis and response procedures in a digital workflow format.
+SOAR refers to technologies that enable organizations to collect inputs monitored by the security operations team. For example, alerts from the SIEM system and other security technologies — where incident analysis and triage can be performed by leveraging a combination of human and machine power — help define, prioritize and drive standardized incident response activities. SOAR tools allow an organization to define incident analysis and response procedures in a digital workflow format. (Gartner's SOAR definition)
+
+"The key to a successful SOAR implementation is training security
+professionals in how to develop a process, document it and
+automate it." Gartner
+
 
 I prepared this page for sharing my experience and best practices for SOC - SOAR Projects. If you have any questions or suggestions please do not hesitate to reach out to me.
 
