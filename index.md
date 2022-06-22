@@ -1,8 +1,6 @@
-## Welcome to GitHub Pages
+## SOAR Guide
 
-You can use the [editor on GitHub](https://github.com/yukselao/yukselao.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+I prepared this page for sharing my experience and best practices for SOC - SOAR Projects. If you have any questions or suggestions please do not hesitate to reach out to me.
 
 ### Markdown
 
