@@ -18,6 +18,12 @@ I prepared this page for sharing my experience and best practices for SOC - SOAR
 - Threat Intelligence checks for IPs,URLs,DOMAINs,HASHes
 - Regulations
 
+### Benefits of SOAR projects
+
+- Triage and consolidate alerts
+- Customize enrichment
+- Orchestrate (and automate) response
+
 ```markdown
 Syntax highlighted code block
 
