@@ -9,9 +9,14 @@ automate it." Gartner
 
 I prepared this page for sharing my experience and best practices for SOC - SOAR Projects. If you have any questions or suggestions please do not hesitate to reach out to me.
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Challenges
+
+- High Volume Alarms/Offenses
+- Manuel Investigations
+- A dizzying array of tools to respond
+- Threat Intelligence checks for IPs,URLs,DOMAINs,HASHes
+- Regulations
 
 ```markdown
 Syntax highlighted code block
