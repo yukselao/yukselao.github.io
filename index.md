@@ -25,7 +25,7 @@ I prepared this page for sharing my experience and best practices for SOC - SOAR
 - Orchestrate (and automate) response
 
 ### Common mistakes about SOAR projects
-- Automation and integration development idea without developer talent. Automation effort is inevitable when designing a real end-to-end value-added automation playbook. For this reason, if you want to get the maximum benefit from a SOAR project, I recommend having more than one engineer in your team, if possible, who can develop these playbooks. If you do not have a team with this competence, you may have to face the fact that your SOAR project will not have enough dynamism. As a solution, if you are thinking of solving this problem with outsourcing service, I recommend that you make sure that the outsource company you receive service from has a ninja team with sufficient technical skills.
+- Automation and integration development idea without developer talent. I think this is one of the most critical mistakes. Automation effort is inevitable when designing a real end-to-end value-added automation playbook. For this reason, if you want to get the maximum benefit from a SOAR project, I recommend having more than one engineer in your team, if possible, who can develop these playbooks. If you do not have a team with this competence, you may have to face the fact that your SOAR project will not have enough dynamism. As a solution, if you are thinking of solving this problem with outsourcing service, I recommend that you make sure that the outsource company you receive service from has a ninja team with sufficient technical skills.
 
 
 ```markdown
