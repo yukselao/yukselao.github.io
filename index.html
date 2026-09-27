@@ -53,9 +53,8 @@ a:hover{color:var(--accent);text-decoration-color:var(--ink)}
 /* ================= sidebar ================= */
 .brand{display:flex;align-items:center;gap:12px;margin-bottom:6px}
 .brand .logo{
-  width:40px;height:40px;flex:0 0 40px;border:1px solid var(--line-2);border-radius:8px;
-  display:flex;align-items:center;justify-content:center;color:var(--ink);
-  font-weight:600;font-size:15px;background:var(--panel);
+  width:40px;height:40px;flex:0 0 40px;border:1px solid var(--line-2);border-radius:50%;
+  object-fit:cover;background:var(--panel);
 }
 .brand .who{display:flex;flex-direction:column;min-width:0}
 .brand .who b{font-family:var(--sans);font-size:15px;color:var(--ink);letter-spacing:.2px}
@@ -175,7 +174,7 @@ a:hover{color:var(--accent);text-decoration-color:var(--ink)}
   <!-- ============ SIDEBAR ============ -->
   <aside class="sidebar">
     <div class="brand">
-      <div class="logo">&gt;_</div>
+      <img class="logo" src="profile.png" alt="Profile photo" width="40" height="40">
       <div class="who">
         <b>guest@tenable:~</b>
       </div>
