@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ali Okan Yüksel — Enterprise Security Engineer @ Tenable</title>
-<meta name="description" content="Ali Okan Yüksel — Enterprise Security Engineer at Tenable. OSCP, CEH. Exposure management, vulnerability operations and threat hunting at fleet scale. Author of the Threat Hunter's Nessus Handbook.">
+<meta name="description" content="Ali Okan Yüksel — Enterprise Security Engineer at Tenable. OSCP, CEH, RHCSA. Exposure management, vulnerability operations and threat hunting at fleet scale. Author of the Threat Hunter's Nessus Handbook.">
 <meta property="og:title" content="Ali Okan Yüksel — Enterprise Security Engineer @ Tenable">
-<meta property="og:description" content="OSCP, CEH. Exposure management, vulnerability ops and threat hunting. Author of the Threat Hunter's Nessus Handbook.">
+<meta property="og:description" content="OSCP, CEH, RHCSA. Exposure management, vulnerability ops and threat hunting. Author of the Threat Hunter's Nessus Handbook.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://yukselao.github.io/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -124,6 +124,16 @@ a:hover{color:var(--accent);text-decoration-color:var(--ink)}
 .sec li{font-size:13px;color:var(--ink-2)}
 .sec li b{color:var(--ink);font-weight:600}
 
+/* experience */
+.x-role{margin:16px 0 4px}
+.x-role .t{font-size:14px;font-weight:600;color:var(--ink);font-family:var(--sans)}
+.x-role .t .co{color:var(--dim);font-weight:500}
+.x-role .m{font-size:11.5px;color:var(--dim);margin-top:2px}
+.x-note{color:var(--ink-2);font-size:13px;font-family:var(--sans);margin:6px 0 10px;max-width:70ch}
+.x-list{list-style:none;margin:0 0 12px;padding:0;display:flex;flex-direction:column;gap:5px}
+.x-list li{font-size:13px;color:var(--ink-2);position:relative;padding-left:16px}
+.x-list li::before{content:"—";position:absolute;left:0;color:var(--dim)}
+
 /* article card */
 .card{display:flex;gap:14px;align-items:flex-start;border:1px solid var(--line);border-radius:8px;padding:13px 15px;background:var(--bg-2);text-decoration:none;transition:border-color .15s}
 .card:hover{border-color:var(--line-2)}
@@ -175,12 +185,14 @@ a:hover{color:var(--accent);text-decoration-color:var(--ink)}
     <div class="certs">
       <span class="chip">OSCP</span>
       <span class="chip">CEH</span>
+      <span class="chip">RHCSA</span>
     </div>
     <div class="tag">~/$ threat-hunting · exposure mgmt</div>
 
     <div class="sec-label">Navigation</div>
     <nav class="nav" aria-label="Primary">
       <a href="#about"><span class="p">$</span> about</a>
+      <a href="#experience"><span class="p">$</span> experience</a>
       <a href="#articles"><span class="p">$</span> articles</a>
       <a href="#projects"><span class="p">$</span> projects</a>
       <a href="#contact"><span class="p">$</span> contact</a>
@@ -194,7 +206,7 @@ a:hover{color:var(--accent);text-decoration-color:var(--ink)}
 
     <div class="foot">
       <div class="st"><span class="dot">&#9679;</span> online</div>
-      <div>OSCP · CEH</div>
+      <div>OSCP · CEH · RHCSA</div>
       <div style="margin-top:6px">© 2026 Ali Okan Yüksel</div>
     </div>
   </aside>
@@ -221,21 +233,76 @@ a:hover{color:var(--accent);text-decoration-color:var(--ink)}
             <div class="cline"><span class="p">guest@tenable:~$</span> <span class="c">whoami</span></div>
             <div class="lead">
               <div class="nm">Ali Okan Yüksel</div>
-              <div class="rl">Enterprise Security Engineer @ Tenable — OSCP · CEH</div>
+              <div class="rl">Enterprise Security Engineer @ Tenable — OSCP · CEH · RHCSA</div>
             </div>
             <div class="cline"><span class="p">guest@tenable:~$</span> <span class="c">cat ~/about.md</span></div>
             <div class="sec">
-              <p>I work where exposure management meets threat hunting: turning Nessus and Tenable.sc
-              scan data into a fleet-wide detection sensor, automating vulnerability operations, and
-              hunting adversarial behavior at scale.</p>
+              <p>Technical leader for Tenable's Türkiye operation, focused on cloud security and
+              vulnerability management. I bring hands-on expertise in SOAR and QRadar, and I've led
+              initiatives that strengthen our security posture and turn complex exposure challenges
+              into practical solutions.</p>
+              <p>Our mission is safeguarding digital infrastructure — a responsibility I approach
+              strategically and analytically. Backed by OSCP, CEH and RHCSA certifications, I help
+              build resilient cyber defenses and raise our clients' security resilience.</p>
               <p>Author of the <a href="https://yukselao.github.io/nessus-threat-hunting-handbook/" target="_blank" rel="noopener">Threat Hunter's Nessus Handbook</a>
               — 260+ INFO-severity Nessus plugins mapped to ATT&amp;CK techniques, with playbooks you can run from scan data alone.</p>
               <ul>
-                <li><b>&gt;</b> Exposure &amp; Vulnerability Management (Tenable.sc / Nessus / Tenable One)</li>
+                <li><b>&gt;</b> Cloud security &amp; Vulnerability Management (Tenable.sc / Nessus / Tenable One)</li>
+                <li><b>&gt;</b> SOAR &amp; SIEM engineering (QRadar), SOC automation</li>
                 <li><b>&gt;</b> Threat hunting &amp; detection engineering (ATT&amp;CK, hunt playbooks)</li>
-                <li><b>&gt;</b> SOAR &amp; SOC automation, DevSecOps, OpenShift / Kubernetes</li>
               </ul>
             </div>
+          </section>
+
+          <section id="experience">
+            <div class="cline"><span class="p">guest@tenable:~$</span> <span class="c">cat ~/experience.md</span></div>
+
+            <div class="x-role">
+              <div class="t">Senior Enterprise Security Engineer <span class="co">· Tenable</span></div>
+              <div class="m">Sep 2022 – Present · 4 yrs 1 mo · Türkiye · Full-time</div>
+            </div>
+            <p class="x-note">Technical leader for Tenable's Türkiye operation since August 2022. Tenable's professional areas in my scope:</p>
+            <ul class="x-list">
+              <li>Risk-Based Vulnerability Management (IT/OT)</li>
+              <li>Cloud Security</li>
+              <li>Web Application Scanning</li>
+              <li>Attack Surface Management (EASM)</li>
+              <li>OT Security</li>
+              <li>Compliance Assurance</li>
+              <li>Active Directory Security — Tenable Identity Exposure (formerly Tenable.ad)</li>
+              <li>Cyber Exposure Management (CTEM)</li>
+            </ul>
+
+            <div class="x-role">
+              <div class="t">Technical Leader, Threat Management <span class="co">· IBM Security</span></div>
+              <div class="m">4 years · prior to Tenable</div>
+            </div>
+            <ul class="x-list">
+              <li>QRadar Security Intelligence Platform</li>
+              <li>Resilient SOAR Platform</li>
+              <li>Cloud Pak for Security</li>
+              <li>X-Force Threat Intelligence Platform</li>
+              <li>QRadar Advisor with Watson</li>
+            </ul>
+
+            <div class="cline"><span class="p">guest@tenable:~$</span> <span class="c">cat ~/skills.txt</span></div>
+            <ul class="x-list">
+              <li>Resilient SOAR Platform — app &amp; playbook development</li>
+              <li>QRadar App development (Python Flask)</li>
+              <li>Integration development</li>
+              <li>QRadar administration</li>
+              <li>SOC analyst</li>
+              <li>Red Hat OpenShift administration</li>
+            </ul>
+
+            <div class="cline"><span class="p">guest@tenable:~$</span> <span class="c">cat ~/certifications.txt</span></div>
+            <ul class="x-list">
+              <li>OSCP — Offensive Security Certified Professional</li>
+              <li>RHCSA — Red Hat Certified System Administrator</li>
+              <li>Red Hat Certified Professional — Containers, Kubernetes &amp; OpenShift</li>
+              <li>IBM Certified Associate Administrator — IBM QRadar SIEM</li>
+              <li>CEH — Certified Ethical Hacker</li>
+            </ul>
           </section>
 
           <section id="articles">
@@ -292,9 +359,27 @@ a:hover{color:var(--accent);text-decoration-color:var(--ink)}
   function about(){
     return out(
       'Ali Okan Yüksel — Enterprise Security Engineer @ Tenable.\n'+
-      'OSCP · CEH. Exposure management, vulnerability ops and threat hunting at fleet scale.\n'+
+      'OSCP · CEH · RHCSA. Cloud security & vulnerability management, SOAR / QRadar, threat hunting.\n'+
       'Author of the <a href="https://yukselao.github.io/nessus-threat-hunting-handbook/" target="_blank" rel="noopener">Threat Hunter\'s Nessus Handbook</a>.'
     );
+  }
+  function experience(){
+    return out([
+      'Senior Enterprise Security Engineer — Tenable · Sep 2022 – Present · Türkiye',
+      'Technical leader for Tenable\'s Türkiye operation since Aug 2022.',
+      '  RBVM (IT/OT) · Cloud Security · WAS · ASM/EASM · OT Security ·',
+      '  Compliance · AD Security (Identity Exposure) · CTEM',
+      '',
+      'Previously — IBM Security · 4 yrs · technical lead, Threat Management:',
+      '  QRadar SIEM · Resilient SOAR · Cloud Pak for Security · X-Force TI ·',
+      '  QRadar Advisor with Watson',
+      '',
+      'Skills: Resilient SOAR · QRadar App (Flask) · Integration dev ·',
+      '        QRadar admin · SOC analyst · OpenShift admin',
+      '',
+      'Certs: OSCP · RHCSA · Red Hat Certified Professional (OpenShift) ·',
+      '       IBM QRadar SIEM · CEH'
+    ].join('\n'));
   }
   function articles(){
     return out(
@@ -321,11 +406,12 @@ a:hover{color:var(--accent);text-decoration-color:var(--ink)}
     );
   }
   function certs(){
-    return out('[x] OSCP  Offensive Security Certified Professional\n[x] CEH   Certified Ethical Hacker');
+    return out('[x] OSCP   Offensive Security Certified Professional\n[x] CEH    Certified Ethical Hacker\n[x] RHCSA  Red Hat Certified System Administrator');
   }
   function help(){
     return out([
       'about        whoami / bio',
+      'experience   work history &amp; skills',
       'articles     write-ups &amp; handbooks',
       'projects     public repositories',
       'contact      links &amp; email',
@@ -340,6 +426,7 @@ a:hover{color:var(--accent);text-decoration-color:var(--ink)}
       'drwxr-xr-x  articles/    Threat Hunter\'s Nessus Handbook',
       'drwxr-xr-x  projects/    public repositories',
       '-rw-r--r--  about.md',
+      '-rw-r--r--  experience.md',
       '-rw-r--r--  contact.txt',
       '-rw-r--r--  certs.txt'
     ].join('\n'));
@@ -351,7 +438,7 @@ a:hover{color:var(--accent);text-decoration-color:var(--ink)}
       'role    Enterprise Security Engineer',
       'os      Exposure Management v2026',
       'shell   bash',
-      'certs   OSCP · CEH',
+      'certs   OSCP · CEH · RHCSA',
       'uptime  ~7 years in infosec'
     ].join('\n'));
   }
@@ -364,6 +451,7 @@ a:hover{color:var(--accent);text-decoration-color:var(--ink)}
     var html = '';
     if(low==='help'||low==='?'||low==='man') html = help();
     else if(low==='whoami'||low==='about'||low==='bio'||low==='whois'||low==='finger') html = about();
+    else if(low==='experience'||low==='exp'||low==='resume'||low==='cv'||low==='cat experience.md') html = experience();
     else if(low==='articles'||low==='posts'||low==='blog'||low==='cat articles.md') html = articles();
     else if(low==='projects'||low==='repos'||low==='cat projects.md') html = projects();
     else if(low==='contact'||low==='links'||low==='mail'||low==='email'||low==='cat contact.txt') html = contact();
@@ -402,7 +490,7 @@ a:hover{color:var(--accent);text-decoration-color:var(--ink)}
   function onScroll(){
     var y = window.scrollY + 120;
     var cur = null;
-    ['#about','#articles','#projects','#contact'].forEach(function(id){
+    ['#about','#experience','#articles','#projects','#contact'].forEach(function(id){
       var el = document.querySelector(id);
       if(el && el.offsetTop <= y) cur = id;
     });
