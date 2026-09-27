@@ -11,185 +11,142 @@
 <meta property="og:url" content="https://yukselao.github.io/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
 <style>
 :root{
-  --bg:#0a0d0a;
-  --bg-2:#0d110d;
-  --panel:#0f1510;
-  --panel-2:#131a14;
-  --line:#1d271e;
-  --line-2:#2a372b;
-  --ink:#d7e6d9;
-  --ink-2:#9ab29d;
-  --dim:#6f8572;
-  --dim-2:#4b5c4e;
-  --green:#4ade80;
-  --green-dim:#2f9e55;
-  --lime:#e8ff01;
-  --amber:#ffb454;
-  --red:#ff6b6b;
-  --red-2:#f85149;
-  --cyan:#56d4dd;
-  --blue:#7cb7ff;
+  --bg:#0a0a0a;
+  --bg-2:#0e0e0e;
+  --panel:#121212;
+  --panel-2:#171717;
+  --line:#232323;
+  --line-2:#343434;
+  --ink:#ececec;
+  --ink-2:#b9b9b9;
+  --dim:#7f7f7f;
+  --dim-2:#4b4b4b;
+  --accent:#ffffff;
   --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
   --sans:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,sans-serif;
-  --r:10px;
+  --r:8px;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:18px}
 body{
   margin:0;background:var(--bg);color:var(--ink);
-  font-family:var(--mono);font-size:14px;line-height:1.6;
+  font-family:var(--mono);font-size:14px;line-height:1.65;
   -webkit-font-smoothing:antialiased;
 }
-a{color:var(--green);text-decoration:none;border-bottom:1px dotted transparent;transition:border-color .15s,color .15s}
-a:hover{color:var(--lime);border-bottom-color:var(--lime)}
+a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--dim-2);text-underline-offset:3px;transition:color .15s,text-decoration-color .15s}
+a:hover{color:var(--accent);text-decoration-color:var(--ink)}
 
 /* ================= layout ================= */
 .layout{display:flex;min-height:100vh}
 .sidebar{
-  width:290px;flex:0 0 290px;position:sticky;top:0;height:100vh;
+  width:286px;flex:0 0 286px;position:sticky;top:0;height:100vh;
   background:linear-gradient(180deg,var(--bg-2),var(--bg));
   border-right:1px solid var(--line);
   display:flex;flex-direction:column;padding:22px 20px;overflow-y:auto;
 }
 .main{flex:1;min-width:0;padding:26px 28px 60px;display:flex;justify-content:center}
-.term{width:100%;max-width:900px;align-self:flex-start}
+.term{width:100%;max-width:860px;align-self:flex-start}
 
 /* ================= sidebar ================= */
 .brand{display:flex;align-items:center;gap:12px;margin-bottom:6px}
 .brand .logo{
-  width:40px;height:40px;flex:0 0 40px;border:1px solid var(--line-2);border-radius:9px;
-  display:flex;align-items:center;justify-content:center;color:var(--green);
-  font-weight:700;font-size:15px;background:var(--panel);
+  width:40px;height:40px;flex:0 0 40px;border:1px solid var(--line-2);border-radius:8px;
+  display:flex;align-items:center;justify-content:center;color:var(--ink);
+  font-weight:600;font-size:15px;background:var(--panel);
 }
 .brand .who{display:flex;flex-direction:column;min-width:0}
 .brand .who b{font-family:var(--sans);font-size:15px;color:var(--ink);letter-spacing:.2px}
 .brand .who span{font-size:11.5px;color:var(--dim)}
-.role{
-  font-size:12.5px;color:var(--ink-2);margin:0 0 4px;
-}
-.role b{color:var(--green);font-weight:600}
+.role{font-size:12.5px;color:var(--ink-2);margin:0 0 4px}
+.role b{color:var(--ink);font-weight:600}
 .tag{margin:12px 0 16px;font-size:11px;color:var(--dim);letter-spacing:.3px}
-.sec-label{
-  font-size:10.5px;text-transform:uppercase;letter-spacing:.16em;color:var(--dim-2);
-  margin:18px 0 8px;
-}
+.sec-label{font-size:10.5px;text-transform:uppercase;letter-spacing:.16em;color:var(--dim-2);margin:18px 0 8px}
 .nav{display:flex;flex-direction:column;gap:2px}
 .nav a{
   display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:7px;
-  color:var(--ink-2);border:0;font-size:13.5px;
+  color:var(--ink-2);border:0;text-decoration:none;font-size:13.5px;
 }
-.nav a .p{color:var(--green);font-weight:600;opacity:.85}
+.nav a .p{color:var(--dim);font-weight:600}
 .nav a:hover{background:var(--panel);color:var(--ink)}
-.nav a.active{background:var(--panel);color:var(--lime)}
+.nav a.active{background:var(--panel-2);color:var(--ink)}
+.nav a.active .p{color:var(--ink)}
 .certs{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
-.certs .chip{
-  font-size:10.5px;font-weight:700;letter-spacing:.06em;padding:3px 8px;border-radius:5px;
-  border:1px solid var(--line-2);color:var(--amber);
-}
-.certs .chip.lime{color:#14180a;background:var(--lime);border-color:var(--lime)}
+.certs .chip{font-size:10.5px;font-weight:600;letter-spacing:.06em;padding:3px 8px;border-radius:5px;border:1px solid var(--line-2);color:var(--ink-2)}
 .social{display:flex;flex-direction:column;gap:2px}
-.social a{padding:7px 10px;border-radius:7px;display:flex;gap:10px;align-items:center;color:var(--ink-2);border:0;font-size:13px}
-.social a:hover{background:var(--panel);color:var(--lime)}
-.social .ic{width:15px;text-align:center;color:var(--green);font-weight:700}
+.social a{padding:7px 10px;border-radius:7px;display:flex;gap:10px;align-items:center;color:var(--ink-2);border:0;text-decoration:none;font-size:13px}
+.social a:hover{background:var(--panel);color:var(--ink)}
+.social .ic{width:15px;text-align:center;color:var(--dim);font-weight:600}
 .sidebar .foot{margin-top:auto;padding-top:20px;font-size:11px;color:var(--dim-2);line-height:1.5}
-.sidebar .foot .st{color:var(--green-dim);font-weight:600}
+.sidebar .foot .st{color:var(--ink-2);font-weight:600}
+.sidebar .foot .st .dot{color:var(--ink);animation:blink 2.2s steps(1) infinite}
 
 /* ================= terminal window ================= */
-.term{border:1px solid var(--line-2);border-radius:var(--r);background:var(--panel);
-  box-shadow:0 24px 70px -30px rgba(0,0,0,.85);overflow:hidden}
-.term-bar{
-  display:flex;align-items:center;gap:8px;padding:11px 14px;
-  background:var(--panel-2);border-bottom:1px solid var(--line);
-}
+.term{border:1px solid var(--line-2);border-radius:var(--r);background:var(--panel);box-shadow:0 24px 70px -34px rgba(0,0,0,.9);overflow:hidden}
+.term-bar{display:flex;align-items:center;gap:8px;padding:11px 14px;background:var(--panel-2);border-bottom:1px solid var(--line)}
 .dots{display:flex;gap:6px}
-.dots i{width:11px;height:11px;border-radius:50%;display:block}
-.dots i.r{background:#ff5f56}.dots i.y{background:#ffbd2e}.dots i.g{background:#27c93f}
+.dots i{width:11px;height:11px;border-radius:50%;display:block;background:#333}
+.dots i:nth-child(2){background:#3d3d3d}
+.dots i:nth-child(3){background:#484848}
 .term-title{margin-left:8px;font-size:12px;color:var(--dim);letter-spacing:.2px}
 .term-title b{color:var(--ink-2);font-weight:500}
-.term-body{padding:24px 26px 28px}
+.term-body{padding:20px 24px 26px}
 
-.hero{text-align:center;margin-bottom:10px}
-.hero pre{
-  margin:0;font-family:var(--mono);color:var(--green);
-  text-shadow:0 0 12px rgba(74,222,128,.28);
-  font-size:clamp(8px,1.35vw,13px);line-height:1.15;overflow-x:auto;
-}
-.hero .tagline{margin-top:16px}
-.hero .tagline .t1{font-size:15px;font-weight:600;color:var(--ink);font-family:var(--sans)}
-.hero .tagline .t2{font-size:12.5px;color:var(--dim);margin-top:3px}
-.hero .badges{margin-top:14px;display:flex;justify-content:center;gap:8px;flex-wrap:wrap}
-.hero .badges span{
-  font-size:11px;font-weight:700;letter-spacing:.08em;padding:4px 11px;border-radius:6px;
-  border:1px solid var(--line-2);color:var(--green);background:var(--bg-2);
-}
-.hero .badges span.lime{color:#14180a;background:var(--lime);border-color:var(--lime)}
+/* prompt at the very top */
+.prompt-row{display:flex;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid var(--line);margin-bottom:18px}
+.prompt-row .ps1{color:var(--ink);font-weight:600;white-space:nowrap;font-size:13.5px}
+.prompt-row .ps1 .at{color:var(--dim);font-weight:400}
+#cmd{flex:1;background:transparent;border:0;outline:0;color:var(--ink);font-family:var(--mono);font-size:13.5px;caret-color:transparent}
+#cmd::placeholder{color:var(--dim-2)}
+.cursor{display:inline-block;width:9px;height:16px;background:var(--ink);vertical-align:-3px;animation:blink 1.05s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
 
-/* sections as command output */
-.sec{margin-top:30px;border-top:1px dashed var(--line);padding-top:18px}
-.cmdline{font-size:13px;margin-bottom:12px;white-space:nowrap;overflow-x:auto}
-.cmdline .p{color:var(--green);font-weight:600}
-.cmdline .path{color:var(--blue)}
-.cmdline .c{color:var(--ink)}
-.sec h2{font-family:var(--sans);font-size:17px;margin:4px 0 10px;color:var(--ink);letter-spacing:.2px}
-.sec h2::before{content:"▍";color:var(--green);margin-right:8px}
-.sec p{color:var(--ink-2);font-size:13.5px;margin:0 0 10px;font-family:var(--sans)}
-.sec .mono p{font-family:var(--mono)}
-.sec ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
-.sec li{font-family:var(--mono);font-size:13px;color:var(--ink-2)}
+/* output / session log */
+.tty .cline{font-size:13px;margin:22px 0 8px;white-space:pre-wrap;word-break:break-word}
+.tty .cline:first-child{margin-top:0}
+.tty .cline .p{color:var(--ink);font-weight:600}
+.tty .cline .c{color:var(--ink)}
+.tty .out{color:var(--ink-2);font-size:13px;white-space:pre-wrap;word-break:break-word;font-family:var(--mono)}
+
+/* whoami lead */
+.lead{color:var(--ink);font-family:var(--mono)}
+.lead .nm{font-size:16px;font-weight:600;color:var(--ink)}
+.lead .rl{font-size:13px;color:var(--ink-2);margin-top:3px}
+.lead .certs{margin-top:8px}
+
+/* about body */
+.sec{margin-top:6px}
+.sec p{color:var(--ink-2);font-size:13px;margin:0 0 10px;font-family:var(--sans);max-width:70ch}
+.sec p a{font-family:var(--mono)}
+.sec ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:7px}
+.sec li{font-size:13px;color:var(--ink-2)}
 .sec li b{color:var(--ink);font-weight:600}
 
 /* article card */
-.card{
-  display:flex;gap:14px;align-items:flex-start;border:1px solid var(--line);border-radius:9px;
-  padding:14px 16px;background:var(--bg-2);transition:border-color .15s,transform .15s;
-}
-.card:hover{border-color:var(--green-dim);transform:translateY(-1px)}
-.card .ic{font-size:20px;line-height:1}
-.card h3{margin:0 0 4px;font-family:var(--sans);font-size:14.5px;color:var(--ink)}
-.card p{margin:0;font-size:12px;color:var(--dim)}
-.card .arrow{margin-left:auto;color:var(--green);font-size:14px}
+.card{display:flex;gap:14px;align-items:flex-start;border:1px solid var(--line);border-radius:8px;padding:13px 15px;background:var(--bg-2);text-decoration:none;transition:border-color .15s}
+.card:hover{border-color:var(--line-2)}
+.card .ic{font-size:18px;line-height:1}
+.card h3{margin:0 0 4px;font-family:var(--sans);font-size:14px;color:var(--ink);text-decoration:none}
+.card p{margin:0;font-size:12px;color:var(--dim);font-family:var(--sans);text-decoration:none}
+.card .arrow{margin-left:auto;color:var(--dim);font-size:13px}
 
 /* projects */
-.proj{display:flex;gap:12px;align-items:baseline;padding:9px 4px;border-bottom:1px solid var(--line)}
+.proj{display:flex;gap:12px;align-items:baseline;padding:8px 2px;border-bottom:1px solid var(--line)}
 .proj:last-child{border-bottom:0}
-.proj .git{color:var(--green);font-weight:700;width:18px}
+.proj .git{color:var(--dim);font-weight:600;width:18px}
 .proj .repo{font-weight:600;color:var(--ink);font-size:13px;white-space:nowrap}
 .proj .repo span{color:var(--dim);font-weight:400}
 .proj .desc{font-size:12px;color:var(--dim);font-family:var(--sans)}
-.proj a{margin-left:auto;font-size:12px;color:var(--dim);border:0}
-.proj a:hover{color:var(--lime)}
+.proj a{margin-left:auto;font-size:12px;color:var(--dim)}
+.proj a:hover{color:var(--ink)}
 
 /* contact */
-.contact{display:flex;flex-direction:column;gap:9px}
+.contact{display:flex;flex-direction:column;gap:8px}
 .contact .row{display:flex;align-items:center;gap:12px;font-size:13px}
-.contact .row .k{width:86px;color:var(--green);font-weight:600;flex:0 0 86px}
+.contact .row .k{width:84px;color:var(--ink);font-weight:600;flex:0 0 84px}
 .contact .row .v{color:var(--ink-2);overflow-wrap:anywhere}
-.contact .row .v a{color:var(--blue)}
-
-/* ================= interactive tty ================= */
-.tty{margin-top:32px;border-top:1px dashed var(--line);padding-top:14px}
-.tty .cline{font-size:13px;margin:10px 0 4px;white-space:pre-wrap;word-break:break-word}
-.tty .cline .p{color:var(--green);font-weight:600}
-.tty .cline .c{color:var(--ink)}
-.tty .out{color:var(--ink-2);font-size:13px;white-space:pre-wrap;word-break:break-word;font-family:var(--mono)}
-.tty .out .ok{color:var(--green)}
-.tty .out .warn{color:var(--amber)}
-.tty .out .err{color:var(--red)}
-.tty .out .dim{color:var(--dim)}
-.tty .out a{color:var(--blue)}
-.prompt-row{display:flex;align-items:center;gap:10px;margin-top:16px;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--bg-2)}
-.prompt-row .ps1{color:var(--green);font-weight:600;white-space:nowrap;font-size:13px}
-.prompt-row .ps1 .at{color:var(--dim);font-weight:400}
-#cmd{
-  flex:1;background:transparent;border:0;outline:0;color:var(--ink);
-  font-family:var(--mono);font-size:13px;caret-color:var(--lime);
-}
-#cmd::placeholder{color:var(--dim-2)}
-.cursor{display:inline-block;width:8px;height:15px;background:var(--lime);vertical-align:-2px;animation:blink 1.1s steps(1) infinite}
-@keyframes blink{50%{opacity:0}}
 
 @media (max-width:920px){
   .layout{flex-direction:column}
@@ -198,8 +155,7 @@ a:hover{color:var(--lime);border-bottom-color:var(--lime)}
   .nav{flex-direction:row;flex-wrap:wrap}
   .social{flex-direction:row;flex-wrap:wrap}
   .main{padding:16px 12px 48px}
-  .term-body{padding:18px 14px 22px}
-  .hero pre{font-size:7px;line-height:1.1}
+  .term-body{padding:16px 14px 20px}
 }
 </style>
 </head>
@@ -217,7 +173,7 @@ a:hover{color:var(--lime);border-bottom-color:var(--lime)}
     </div>
     <p class="role">Ali Okan Yüksel — <b>Enterprise Security Engineer @ Tenable</b></p>
     <div class="certs">
-      <span class="chip lime">OSCP</span>
+      <span class="chip">OSCP</span>
       <span class="chip">CEH</span>
     </div>
     <div class="tag">~/$ threat-hunting · exposure mgmt</div>
@@ -237,7 +193,7 @@ a:hover{color:var(--lime);border-bottom-color:var(--lime)}
     </nav>
 
     <div class="foot">
-      <div class="st">● STATUS: online</div>
+      <div class="st"><span class="dot">&#9679;</span> online</div>
       <div>OSCP · CEH</div>
       <div style="margin-top:6px">© 2026 Ali Okan Yüksel</div>
     </div>
@@ -247,97 +203,75 @@ a:hover{color:var(--lime);border-bottom-color:var(--lime)}
   <main class="main">
     <div class="term">
       <div class="term-bar">
-        <span class="dots"><i class="r"></i><i class="y"></i><i class="g"></i></span>
-        <span class="term-title">aliokan@tenable — <b>~/</b> · zsh</span>
+        <span class="dots"><i></i><i></i><i></i></span>
+        <span class="term-title">guest@tenable — <b>~/</b> · bash</span>
       </div>
       <div class="term-body">
 
-        <div class="hero">
-          <pre aria-label="Ali Okan Yuksel">    mm     mm         mmmmmm               mmmm    mm   mmm     mm     mmm   mm
-   ####    ##         ""##""              ##""##   ##  ##"     ####    ###   ##
-   ####    ##           ##               ##    ##  ##m##       ####    ##"#  ##
-  ##  ##   ##           ##               ##    ##  #####      ##  ##   ## ## ##
-  ######   ##           ##               ##    ##  ##  ##m    ######   ##  #m##
- m##  ##m  ##mmmmmm   mm##mm              ##mm##   ##   ##m  m##  ##m  ##   ###
- ""    ""  """"""""   """"""               """"    ""    ""  ""    ""  ""   """
-
-mmm    mmm mm    mm  mm   mmm    mmmm    mmmmmmmm  mm
- ##m  m##  ##    ##  ##  ##"   m#""""#   ##""""""  ##
-  ##mm##   ##    ##  ##m##     ##m       ##        ##
-   "##"    ##    ##  #####      "####m   #######   ##
-    ##     ##    ##  ##  ##m        "##  ##        ##
-    ##     "##mm##"  ##   ##m  #mmmmm#"  ##mmmmmm  ##mmmmmm
-    ""       """"    ""    ""   """""    """"""""  """"""""</pre>
-          <div class="tagline">
-            <div class="t1">Enterprise Security Engineer <span style="color:var(--dim)">@</span> <span style="color:var(--green)">Tenable</span></div>
-            <div class="t2">exposure management · vulnerability ops · threat hunting</div>
-          </div>
-          <div class="badges">
-            <span class="lime">OSCP</span><span>CEH</span><span>ATT&amp;CK</span>
-          </div>
-        </div>
-
-        <section class="sec" id="about">
-          <div class="cmdline"><span class="p">guest@tenable:~$</span> <span class="c">cat ~/about.md</span></div>
-          <h2>whoami</h2>
-          <p>Ali Okan Yüksel — <strong>Enterprise Security Engineer at Tenable</strong>, holding
-          <strong>OSCP</strong> and <strong>CEH</strong>. I work where exposure management meets threat hunting:
-          turning Nessus and Tenable.sc scan data into a fleet-wide detection sensor, automating vulnerability
-          operations, and hunting adversarial behavior at scale.</p>
-          <p>Author of the <a href="https://yukselao.github.io/nessus-threat-hunting-handbook/" target="_blank" rel="noopener">Threat Hunter's Nessus Handbook</a>
-          — 260+ INFO-severity Nessus plugins mapped to ATT&amp;CK techniques, with playbooks you can run from scan data alone.</p>
-          <ul>
-            <li><b>&gt;</b> Exposure Management &amp; Vulnerability Management (Tenable.sc / Nessus / Tenable One)</li>
-            <li><b>&gt;</b> Threat hunting &amp; detection engineering (ATT&amp;CK, sigma, hunt playbooks)</li>
-            <li><b>&gt;</b> SOAR &amp; SOC automation, DevSecOps, OpenShift / Kubernetes</li>
-          </ul>
-        </section>
-
-        <section class="sec" id="articles">
-          <div class="cmdline"><span class="p">guest@tenable:~$</span> <span class="c">ls -l ./articles/</span></div>
-          <h2>Articles</h2>
-          <a class="card" href="https://yukselao.github.io/nessus-threat-hunting-handbook/" target="_blank" rel="noopener">
-            <div class="ic">&#128218;</div>
-            <div>
-              <h3>Threat Hunter's Nessus Handbook</h3>
-              <p>The INFO-severity plugins that turn a routine Nessus scan into fleet-wide host enumeration — autoruns, ShimCache, listeners, local admins — mapped to ATT&amp;CK, with 7 hunt playbooks.</p>
-            </div>
-            <div class="arrow">&#8599;</div>
-          </a>
-        </section>
-
-        <section class="sec" id="projects">
-          <div class="cmdline"><span class="p">guest@tenable:~$</span> <span class="c">ls -l ./projects/</span></div>
-          <h2>Projects</h2>
-          <div class="proj"><span class="git">git</span><span class="repo">nessus-threat-hunting-handbook <span>· web</span></span><span class="desc">Handbook &amp; hunting reference</span><a href="https://yukselao.github.io/nessus-threat-hunting-handbook/" target="_blank" rel="noopener">&#8599;</a></div>
-          <div class="proj"><span class="git">git</span><span class="repo">tenablesc-toolkit</span><span class="desc">Tenable.sc automation toolkit</span><a href="https://github.com/yukselao/tenablesc-toolkit" target="_blank" rel="noopener">&#8599;</a></div>
-          <div class="proj"><span class="git">git</span><span class="repo">openshift-nessus-deployer</span><span class="desc">Nessus scanners on OpenShift</span><a href="https://github.com/yukselao/openshift-nessus-deployer" target="_blank" rel="noopener">&#8599;</a></div>
-          <div class="proj"><span class="git">git</span><span class="repo">nessus-plugin-tools</span><span class="desc">Tooling for Nessus plugins</span><a href="https://github.com/yukselao/nessus-plugin-tools" target="_blank" rel="noopener">&#8599;</a></div>
-          <div class="proj"><span class="git">git</span><span class="repo">tenable-one-toolkit</span><span class="desc">Tenable One exposure utilities</span><a href="https://github.com/yukselao/tenable-one-toolkit" target="_blank" rel="noopener">&#8599;</a></div>
-          <div class="proj"><span class="git">git</span><span class="repo">tenable.sc-jira-integration</span><span class="desc">Tenable.sc ↔ Jira integration</span><a href="https://github.com/yukselao/tenable.sc-jira-integration" target="_blank" rel="noopener">&#8599;</a></div>
-          <div class="proj"><span class="git">git</span><span class="repo">nessus-agent-iplookup</span><span class="desc">Resolve agent IPs fleet-wide</span><a href="https://github.com/yukselao/nessus-agent-iplookup" target="_blank" rel="noopener">&#8599;</a></div>
-        </section>
-
-        <section class="sec" id="contact">
-          <div class="cmdline"><span class="p">guest@tenable:~$</span> <span class="c">cat ~/contact.txt</span></div>
-          <h2>Contact</h2>
-          <div class="contact">
-            <div class="row"><span class="k">linkedin</span><span class="v"><a href="https://tr.linkedin.com/in/ali-okan-yuksel" target="_blank" rel="noopener">tr.linkedin.com/in/ali-okan-yuksel</a></span></div>
-            <div class="row"><span class="k">github</span><span class="v"><a href="https://github.com/yukselao" target="_blank" rel="noopener">github.com/yukselao</a></span></div>
-            <div class="row"><span class="k">email</span><span class="v"><a href="mailto:aokany@gmail.com">aokany@gmail.com</a></span></div>
-          </div>
-        </section>
-
-        <div class="tty" id="tty">
-          <div class="cline"><span class="p">guest@tenable:~$</span> <span class="c">./welcome.sh</span></div>
-          <div class="out">Welcome. This terminal is interactive — type <span class="ok">help</span> to see the available commands.</div>
-        </div>
-
+        <!-- cursor / prompt at the very top -->
         <form class="prompt-row" id="prompt" autocomplete="off">
           <span class="ps1">guest@tenable<span class="at">:~</span>$</span>
           <input id="cmd" type="text" placeholder="type help …" aria-label="terminal command" spellcheck="false" autocomplete="off">
           <span class="cursor"></span>
         </form>
+
+        <div class="tty" id="tty">
+
+          <section id="about">
+            <div class="cline"><span class="p">guest@tenable:~$</span> <span class="c">whoami</span></div>
+            <div class="lead">
+              <div class="nm">Ali Okan Yüksel</div>
+              <div class="rl">Enterprise Security Engineer @ Tenable — OSCP · CEH</div>
+            </div>
+            <div class="cline"><span class="p">guest@tenable:~$</span> <span class="c">cat ~/about.md</span></div>
+            <div class="sec">
+              <p>I work where exposure management meets threat hunting: turning Nessus and Tenable.sc
+              scan data into a fleet-wide detection sensor, automating vulnerability operations, and
+              hunting adversarial behavior at scale.</p>
+              <p>Author of the <a href="https://yukselao.github.io/nessus-threat-hunting-handbook/" target="_blank" rel="noopener">Threat Hunter's Nessus Handbook</a>
+              — 260+ INFO-severity Nessus plugins mapped to ATT&amp;CK techniques, with playbooks you can run from scan data alone.</p>
+              <ul>
+                <li><b>&gt;</b> Exposure &amp; Vulnerability Management (Tenable.sc / Nessus / Tenable One)</li>
+                <li><b>&gt;</b> Threat hunting &amp; detection engineering (ATT&amp;CK, hunt playbooks)</li>
+                <li><b>&gt;</b> SOAR &amp; SOC automation, DevSecOps, OpenShift / Kubernetes</li>
+              </ul>
+            </div>
+          </section>
+
+          <section id="articles">
+            <div class="cline"><span class="p">guest@tenable:~$</span> <span class="c">ls -l ./articles/</span></div>
+            <a class="card" href="https://yukselao.github.io/nessus-threat-hunting-handbook/" target="_blank" rel="noopener">
+              <div class="ic">&#128218;</div>
+              <div>
+                <h3>Threat Hunter's Nessus Handbook</h3>
+                <p>The INFO-severity plugins that turn a routine Nessus scan into fleet-wide host enumeration — autoruns, ShimCache, listeners, local admins — mapped to ATT&amp;CK, with 7 hunt playbooks.</p>
+              </div>
+              <div class="arrow">&#8599;</div>
+            </a>
+          </section>
+
+          <section id="projects">
+            <div class="cline"><span class="p">guest@tenable:~$</span> <span class="c">ls -l ./projects/</span></div>
+            <div class="proj"><span class="git">git</span><span class="repo">nessus-threat-hunting-handbook <span>· web</span></span><span class="desc">Handbook &amp; hunting reference</span><a href="https://yukselao.github.io/nessus-threat-hunting-handbook/" target="_blank" rel="noopener">&#8599;</a></div>
+            <div class="proj"><span class="git">git</span><span class="repo">tenablesc-toolkit</span><span class="desc">Tenable.sc automation toolkit</span><a href="https://github.com/yukselao/tenablesc-toolkit" target="_blank" rel="noopener">&#8599;</a></div>
+            <div class="proj"><span class="git">git</span><span class="repo">openshift-nessus-deployer</span><span class="desc">Nessus scanners on OpenShift</span><a href="https://github.com/yukselao/openshift-nessus-deployer" target="_blank" rel="noopener">&#8599;</a></div>
+            <div class="proj"><span class="git">git</span><span class="repo">nessus-plugin-tools</span><span class="desc">Tooling for Nessus plugins</span><a href="https://github.com/yukselao/nessus-plugin-tools" target="_blank" rel="noopener">&#8599;</a></div>
+            <div class="proj"><span class="git">git</span><span class="repo">tenable-one-toolkit</span><span class="desc">Tenable One exposure utilities</span><a href="https://github.com/yukselao/tenable-one-toolkit" target="_blank" rel="noopener">&#8599;</a></div>
+            <div class="proj"><span class="git">git</span><span class="repo">tenable.sc-jira-integration</span><span class="desc">Tenable.sc ↔ Jira integration</span><a href="https://github.com/yukselao/tenable.sc-jira-integration" target="_blank" rel="noopener">&#8599;</a></div>
+            <div class="proj"><span class="git">git</span><span class="repo">nessus-agent-iplookup</span><span class="desc">Resolve agent IPs fleet-wide</span><a href="https://github.com/yukselao/nessus-agent-iplookup" target="_blank" rel="noopener">&#8599;</a></div>
+          </section>
+
+          <section id="contact">
+            <div class="cline"><span class="p">guest@tenable:~$</span> <span class="c">cat ~/contact.txt</span></div>
+            <div class="contact">
+              <div class="row"><span class="k">linkedin</span><span class="v"><a href="https://tr.linkedin.com/in/ali-okan-yuksel" target="_blank" rel="noopener">tr.linkedin.com/in/ali-okan-yuksel</a></span></div>
+              <div class="row"><span class="k">github</span><span class="v"><a href="https://github.com/yukselao" target="_blank" rel="noopener">github.com/yukselao</a></span></div>
+              <div class="row"><span class="k">email</span><span class="v"><a href="mailto:aokany@gmail.com">aokany@gmail.com</a></span></div>
+            </div>
+          </section>
+
+          <div class="cline" style="opacity:.85"><span class="p">guest@tenable:~$</span> <span class="c" style="color:var(--dim)"># type a command above, e.g. help</span></div>
+        </div>
 
       </div>
     </div>
@@ -352,49 +286,33 @@ mmm    mmm mm    mm  mm   mmm    mmmm    mmmmmmmm  mm
   var PS1 = '<span class="p">guest@tenable:~$</span>';
 
   function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
-
-  function echoCmd(c){ return '<div class="cline">'+PS1+' <span class="c">'+esc(c)+'</span></div>'; }
+  function echoCmd(c){ return '<div class="cline"><span class="p">guest@tenable:~$</span> <span class="c">'+esc(c)+'</span></div>'; }
   function out(h){ return '<div class="out">'+h+'</div>'; }
-
-  var BANNER = document.querySelector('.hero pre').textContent;
-
-  function ls(){
-    return out([
-      '<span class="dim">drwxr-xr-x</span>  articles/     <span class="dim">→ Threat Hunter\'s Nessus Handbook</span>',
-      '<span class="dim">drwxr-xr-x</span>  projects/     <span class="dim">→ public repositories</span>',
-      '<span class="dim">-rw-r--r--</span>  about.md',
-      '<span class="dim">-rw-r--r--</span>  contact.txt',
-      '<span class="dim">-rw-r--r--</span>  certs.txt'
-    ].join('\n'));
-  }
 
   function about(){
     return out(
-      '<span class="ok">Ali Okan Yüksel</span> — Enterprise Security Engineer @ Tenable.\n'+
+      'Ali Okan Yüksel — Enterprise Security Engineer @ Tenable.\n'+
       'OSCP · CEH. Exposure management, vulnerability ops and threat hunting at fleet scale.\n'+
       'Author of the <a href="https://yukselao.github.io/nessus-threat-hunting-handbook/" target="_blank" rel="noopener">Threat Hunter\'s Nessus Handbook</a>.'
     );
   }
-
   function articles(){
     return out(
-      '<span class="ok">1.</span> Threat Hunter\'s Nessus Handbook\n'+
-      '    <a href="https://yukselao.github.io/nessus-threat-hunting-handbook/" target="_blank" rel="noopener">https://yukselao.github.io/nessus-threat-hunting-handbook/</a>'
+      '1. Threat Hunter\'s Nessus Handbook\n'+
+      '   <a href="https://yukselao.github.io/nessus-threat-hunting-handbook/" target="_blank" rel="noopener">https://yukselao.github.io/nessus-threat-hunting-handbook/</a>'
     );
   }
-
   function projects(){
     return out([
-      '<span class="ok">nessus-threat-hunting-handbook</span>  <span class="dim">github.com/yukselao/nessus-threat-hunting-handbook</span>',
-      '<span class="ok">tenablesc-toolkit</span>                <span class="dim">github.com/yukselao/tenablesc-toolkit</span>',
-      '<span class="ok">openshift-nessus-deployer</span>        <span class="dim">github.com/yukselao/openshift-nessus-deployer</span>',
-      '<span class="ok">nessus-plugin-tools</span>             <span class="dim">github.com/yukselao/nessus-plugin-tools</span>',
-      '<span class="ok">tenable-one-toolkit</span>             <span class="dim">github.com/yukselao/tenable-one-toolkit</span>',
-      '<span class="ok">tenable.sc-jira-integration</span>     <span class="dim">github.com/yukselao/tenable.sc-jira-integration</span>',
-      '<span class="ok">nessus-agent-iplookup</span>           <span class="dim">github.com/yukselao/nessus-agent-iplookup</span>'
+      'nessus-threat-hunting-handbook   github.com/yukselao/nessus-threat-hunting-handbook',
+      'tenablesc-toolkit                github.com/yukselao/tenablesc-toolkit',
+      'openshift-nessus-deployer        github.com/yukselao/openshift-nessus-deployer',
+      'nessus-plugin-tools              github.com/yukselao/nessus-plugin-tools',
+      'tenable-one-toolkit              github.com/yukselao/tenable-one-toolkit',
+      'tenable.sc-jira-integration      github.com/yukselao/tenable.sc-jira-integration',
+      'nessus-agent-iplookup            github.com/yukselao/nessus-agent-iplookup'
     ].join('\n'));
   }
-
   function contact(){
     return out(
       'linkedin  <a href="https://tr.linkedin.com/in/ali-okan-yuksel" target="_blank" rel="noopener">tr.linkedin.com/in/ali-okan-yuksel</a>\n'+
@@ -402,50 +320,40 @@ mmm    mmm mm    mm  mm   mmm    mmmm    mmmmmmmm  mm
       'email     <a href="mailto:aokany@gmail.com">aokany@gmail.com</a>'
     );
   }
-
   function certs(){
-    return out(
-      '<span class="ok">[x] OSCP</span>  Offensive Security Certified Professional\n'+
-      '<span class="ok">[x] CEH</span>   Certified Ethical Hacker'
-    );
+    return out('[x] OSCP  Offensive Security Certified Professional\n[x] CEH   Certified Ethical Hacker');
   }
-
   function help(){
     return out([
-      '<span class="ok">about</span>        whoami / bio',
-      '<span class="ok">articles</span>      write-ups &amp; handbooks',
-      '<span class="ok">projects</span>      public repositories',
-      '<span class="ok">contact</span>       links &amp; email',
-      '<span class="ok">certs</span>         certifications',
-      '<span class="ok">ls</span>            list files',
-      '<span class="ok">neofetch</span>      system info',
-      '<span class="ok">banner</span>        reprint ascii header',
-      '<span class="ok">clear</span>         clear the terminal'
+      'about        whoami / bio',
+      'articles     write-ups &amp; handbooks',
+      'projects     public repositories',
+      'contact      links &amp; email',
+      'certs        certifications',
+      'ls           list files',
+      'neofetch     system info',
+      'clear        clear the log'
     ].join('\n'));
   }
-
+  function ls(){
+    return out([
+      'drwxr-xr-x  articles/    Threat Hunter\'s Nessus Handbook',
+      'drwxr-xr-x  projects/    public repositories',
+      '-rw-r--r--  about.md',
+      '-rw-r--r--  contact.txt',
+      '-rw-r--r--  certs.txt'
+    ].join('\n'));
+  }
   function neofetch(){
-    var logo = [
-      '      ████████      ',
-      '    ██        ██    ',
-      '   ██  ██  ██  ██   ',
-      '   ██          ██   ',
-      '   ██   ████   ██   ',
-      '    ██  █  █  ██    ',
-      '      ████████      '
-    ].join('\n');
-    var info = [
-      '<span class="ok">user</span>    aliokan.yuksel',
-      '<span class="ok">host</span>    tenable',
-      '<span class="ok">role</span>    Enterprise Security Engineer',
-      '<span class="ok">os</span>      Exposure Management v2026',
-      '<span class="ok">shell</span>   zsh',
-      '<span class="ok">certs</span>   OSCP · CEH',
-      '<span class="ok">uptime</span>  ~7 years in infosec'
-    ];
-    var lines = logo.split('\n');
-    for (var i=0;i<info.length;i++){ lines[i] = (lines[i]||'') + '   ' + info[i]; }
-    return out(lines.join('\n'));
+    return out([
+      'user    aliokan.yuksel',
+      'host    tenable',
+      'role    Enterprise Security Engineer',
+      'os      Exposure Management v2026',
+      'shell   bash',
+      'certs   OSCP · CEH',
+      'uptime  ~7 years in infosec'
+    ].join('\n'));
   }
 
   function run(c){
@@ -462,18 +370,17 @@ mmm    mmm mm    mm  mm   mmm    mmmm    mmmmmmmm  mm
     else if(low==='certs'||low==='creds'||low==='badges'||low==='cert'||low==='cat certs.txt') html = certs();
     else if(low==='ls'||low==='ls -la'||low==='tree') html = ls();
     else if(low==='neofetch'||low==='fetch') html = neofetch();
-    else if(low==='banner'||low==='motd'||low==='figlet'||low==='cat /etc/motd') html = out(BANNER);
     else if(low==='pwd') html = out('/home/aliokan.yuksel');
     else if(low==='date') html = out(new Date().toString());
-    else if(low==='uptime') html = out('<span class="dim">up since the first breach. jk.</span>');
+    else if(low==='uptime') html = out('up since the first breach. jk.');
     else if(low==='clear'||low==='cls'||low==='reset'){ tty.innerHTML=''; html=''; }
-    else if(low==='exit'||low==='logout'||low==='quit') html = out('<span class="warn">You can check out any time you like, but you can never leave.</span>');
-    else if(low.indexOf('sudo')===0) html = out('<span class="err">aliokan is not in the sudoers file. This incident will be reported.</span>');
-    else if(low.indexOf('rm -rf')===0 || low.indexOf('rm -f')===0) html = out('<span class="err">rm: refusing to run without --no-preserve-root. nice try.</span>');
-    else if(low==='hack'||low==='hack nasa') html = out('<span class="warn">[*] scanning 0.0.0.0/0 ... just kidding. stay in scope.</span>');
+    else if(low==='exit'||low==='logout'||low==='quit') html = out('You can check out any time you like, but you can never leave.');
+    else if(low.indexOf('sudo')===0) html = out('aliokan is not in the sudoers file. This incident will be reported.');
+    else if(low.indexOf('rm -rf')===0 || low.indexOf('rm -f')===0) html = out('rm: refusing to run without --no-preserve-root. nice try.');
+    else if(low==='hack'||low==='hack nasa') html = out('[*] scanning 0.0.0.0/0 ... just kidding. stay in scope.');
     else if(low==='oscp'||low==='ceh') html = certs();
-    else if(low==='cat') html = out('<span class="dim">usage: cat &lt;file&gt; — try: cat articles.md · cat projects.md · cat contact.txt · cat certs.txt</span>');
-    else html = out('<span class="err">zsh: command not found:</span> '+esc(cc)+'\n<span class="dim">type `help` for the command list.</span>');
+    else if(low==='cat') html = out('usage: cat &lt;file&gt; — try: cat articles.md · cat projects.md · cat contact.txt · cat certs.txt');
+    else html = out('bash: command not found: '+esc(cc)+'\ntype `help` for the command list.');
 
     if(html) tty.insertAdjacentHTML('beforeend', html);
     tty.scrollIntoView({behavior:'smooth', block:'end'});
@@ -486,16 +393,12 @@ mmm    mmm mm    mm  mm   mmm    mmmm    mmmmmmmm  mm
     run(v);
   });
 
-  // focus input when clicking anywhere on the terminal body
   var body = document.querySelector('.term-body');
   body.addEventListener('click', function(e){
     if(e.target.tagName!=='A' && e.target.tagName!=='INPUT') input.focus();
   });
 
-  // sidebar active state on scroll
   var links = document.querySelectorAll('.nav a');
-  var map = {};
-  links.forEach(function(a){ map[a.getAttribute('href')] = a; });
   function onScroll(){
     var y = window.scrollY + 120;
     var cur = null;
@@ -507,6 +410,9 @@ mmm    mmm mm    mm  mm   mmm    mmmm    mmmmmmmm  mm
   }
   window.addEventListener('scroll', onScroll);
   onScroll();
+
+  // focus the prompt on load so the cursor is "at the top" and ready
+  input.focus();
 })();
 </script>
 </body>
